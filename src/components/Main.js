@@ -10,25 +10,23 @@ export default class Main extends Component {
     };
 
     state = {
-        people: []
+        docs: []
     };
 
     componentDidMount() {
-        this.loadContent();
+        this.loadPeopleName();
     }
 
-    loadContent = async () => {
-        const response = await api.get('/people');
-        const { people } = response.data;
-        this.setState({ people })
+    loadPeopleName = async () => {
+        const response = await api.get('/products');
+        const { docs } = response.data;
+        console.log(docs);
+        // this.setState({ people })
     };
   render() {
     return (
       <View>
         <Text>Characters:</Text>
-        {this.state.people.map(peopleName => (
-            <Text>{people.name} </Text>
-            ))}
       </View>
     );
   }
