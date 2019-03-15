@@ -1,8 +1,10 @@
 import { createStackNavigator } from 'react-navigation';
 import Main from './components/Main';
+import Product from './components/Product';
 
 export default createStackNavigator ({
-    Main
+    Main,
+    Product
 }, {
     navigationOptions: {
         headerStyle:{
